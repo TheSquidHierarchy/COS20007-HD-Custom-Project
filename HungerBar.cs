@@ -88,7 +88,7 @@ namespace Custom_Program
         public override void Update()
         {
             //level management
-            if ((_level >= 0) && (_level < 4))
+            if ((_level >= 0) && (_level < 2))
             {_level += 0.001; }
 
             //health management
