@@ -96,16 +96,16 @@ namespace Custom_Program
         //Override for Interact
         public override void Interact(Point2D pt, CallCard c, GameScene context)
         {
-            if ((pt.Y > 128) && (pt.Y < 172) && Money >= 15 && _purchased == false)
+            if ((pt.Y > 128) && (pt.Y < 172) && Money >= 10 && _purchased == false)
             {
-                Money -= 15;
+                Money -= 10;
                 _color = Color.Red;
                 _foodType = FoodType.Worms;
                 _purchased = true;
             }
-            if ((pt.Y > 198) && (pt.Y < 242) && _purchased1 == false && Money >= 30)
+            if ((pt.Y > 198) && (pt.Y < 242) && _purchased1 == false && Money >= 20)
             {
-                Money -= 30;
+                Money -= 20;
                 _color1 = Color.Red;
                 _purchased1 = true;
             }
@@ -149,9 +149,9 @@ namespace Custom_Program
             SplashKit.DrawText("Auto", Color.Black, X + 10, Y + 120);
             SplashKit.DrawText("30", Color.Black, X + 5, Y + 140);
 
-            //Auto Dispenser Upgrade Icon
+            //Health Upgrade Icon
             SplashKit.FillRectangle(Color.Black, X - 2, Y + 170 - 2, 54, 54);
-            SplashKit.FillRectangle(_color1, X, Y + 170, 50, 50);
+            SplashKit.FillRectangle(Color.ForestGreen, X, Y + 170, 50, 50);
             SplashKit.DrawText("Health", Color.Black, X + 5, Y + 190);
             SplashKit.DrawText("2", Color.Black, X + 5, Y + 210);
         }
